@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDACAKE</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script> 
+</head>
+<body>
+    <section>
+        <div class="bienvenido">
+            <h1>BIENVENIDO A LA PASTELERIA</h1>
+            <H1>PANDACAKE</H1>
+            <a href="./index.html">
+                <img src="./img/PANCAKE.png" alt="logo Pasteleria" width="200px">
+            </a>
+        </div>
+
+        <div id="app">
+            <div class="datosGenerales">
+                <!-- DATOS GENERALES -->
+                <h4>Dirección: {{ direccion }} </h4>
+                <h4>Tel: {{telefono}}</h4>
+                <h4>Horario de atención: {{horario}} </h4>
+            </div>
+
+            <div class="pasteles">
+                <h1>--------------------------------------------------------------------------------</h1>
+
+                <!-- MOSTRAR DIFERENTES SABORES DE PASTEL CON SU PRECIO -->
+                <h1>SABORES DE PASTELES:</h1>
+                <div v-html="imprimirPasteles()" ></div>
+                <h1>--------------------------------------------------------------------------------</h1>
+
+                <!-- MOSTRAR DIFERENTES ADORNOS DE PASTEL CON SU PRECIO -->
+                <h1>ADORNOS DE PASTELES:</h1>
+                <div v-html="imprimirAdornos()" ></div>
+            </div>
+
+        </div>
+        <div class="a">
+            <a href="./crear_pastel.html" target="_blank">
+                <img src="./img/boton1.png" alt="crea tu pastel" width="10%" height="7%">
+            </a>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>

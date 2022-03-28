@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREA TU PASTEL</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body style="margin-top: -8%;">
+    <section>
+        <div class="bienvenido" style="margin: 20rem;">
+            <a href="./index.html">
+                <img src="./img/PANCAKE.png" alt="Inicio" width="200px">
+            </a>
+        </div>
+
+        <div id="app">
+            <div class="datosGenerales" style="margin-top: -2;">
+                <h4>Dirección: {{ direccion }} </h4>
+                <h4>Tel: {{telefono}}</h4>
+                <h4>Horario de atención: {{horario}} </h4>
+            </div>
+
+            <div class="pasteles" style="margin-top: -3rem;">
+                <form>
+                    <h1>¡Crea tu pastel!</h1>
+
+                    <p>Sabores de pastel:</p>
+                    <vue-select :list="pasteles" v-model="pastelSelect"></vue-select><br><br>
+
+                    <p>Adornos de pastel:</p>
+                    <vue-select :list="adornos"></vue-select><br><br>
+
+                    <h1>¡LLena el formulario y haz tu pedido!</h1>
+
+                    <label for="Nombre">Nombre completo:</label><br>
+                    <input type="text" placeholder="Nombre" v-model="nombre"><br><br>
+
+                    <label for="Telefono">Teléfono de contacto:</label><br>
+                    <input type="text" placeholder="Teléfono" v-model="tel"><br><br>
+
+                    <label for="email">Correo electrónico</label><br>
+                    <input type="text" placeholder="email" v-model="email"> <br><br>
+
+                    <input type="reset">
+                    <input type="submit" value="Hacer pedido"
+                        onclick="alert('Se ha enviado tu pedido');">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

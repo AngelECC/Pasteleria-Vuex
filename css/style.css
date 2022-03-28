@@ -1,0 +1,46 @@
+:root{
+    --espIzq: 2%;
+}
+
+*{
+    font-family: 'Arimo', sans-serif;;
+}
+
+html{
+    box-sizing: border-box; /*Emparejar la caja y no se deforme*/
+    font-size: 62.5%; /*1 rem = 10px*/ /*Aplicar siempre*/
+}
+
+*,*::before,*::after { /*Modificaciones antes de una propiedad o después, responsive*/
+    box-sizing: inherit; /*Modificar tamño de componentes respescto al tamaño de la pantalla*/ /*Metodologia demb*/
+}
+
+.bienvenido{
+    padding-left: var(--espIzq);
+    text-align: center;
+    font-size: x-large;
+    padding: 40px;
+}
+
+.datosGenerales{
+    text-align:right;
+    margin-top: -25%;
+    margin-right: 1%;
+    font-size: 1.5rem;
+    padding: 40px;
+}
+
+.pasteles{
+    margin-top: 8%;
+    font-size: large;
+    text-align: center;
+    gap: 10%;
+    padding: 40px;
+}
+
+.a{
+    text-align: center;
+}
+section{
+    background-image: url(../img/fondo1.jpg);
+}
